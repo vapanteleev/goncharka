@@ -158,6 +158,25 @@
             <p>Мы - команда профессионалов, которые любят гончарное дело и готовы делиться этой страстью с вами. Наши
                 мастер-классы подходят для всех уровней подготовки и подарят вам незабываемые впечатления.</p>
         </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="slideshow-container">
+                    <div class="slide" style="background-image: url('./public//channels4_profile.jpg');"></div>
+                    <div class="slide" style="background-image: url('./public//ДОНСИМОН.jpg');"></div>
+                    <div class="slide" style="background-image: url('./public//images.jpg');"></div>
+                    <div class="slide" style="background-image: url('./public//ДОНСИМОН.jpg');"></div>
+                </div>
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Связаться с нами</h2>
+                <p>Выберите способ связи:</p>
+                <button onclick="window.location.href='mailto:panteleevvitja32@gmail.com'">Отправить письмо</button>
+                <button onclick="window.location.href='tel:+79991234567'">Позвонить</button>
+                <button onclick="alert('Заказ обратного звонка отправлен!')">Заказать перезвон</button>
+            </div>
+        </div>
+
+
+
     </main>
 
     <footer>
@@ -244,7 +263,17 @@
                 track.style.transform = `translateX(${currentTranslate}px)`;
             }
         });
+
     </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Инициализация библиотеки EmailJS
+        (function () {
+            emailjs.init("H63GdWf3b0oZmdYVl"); // Замените на ваш публичный ключ
+        })();
+    </script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
