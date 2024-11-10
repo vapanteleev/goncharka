@@ -9,10 +9,10 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     // Отправка формы через EmailJS
     emailjs.sendForm('service_juhc04a', 'template_jiuoqve', this)
         .then(function (response) {
-            alert('Сообщение успешно отправлено!');
+            showPopup('Сообщение успешно отправлено!', true);
             console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
-            alert('Ошибка при отправке сообщения. Проверьте консоль для подробностей.');
+            showPopup('Ошибка при отправке сообщения. Пожалуйста, попробуйте позже.', false);
             console.error('Ошибка отправки:', error);
         });
 });
@@ -40,3 +40,35 @@ window.onclick = function (event) {
         modal.style.display = 'none';
     }
 }
+
+
+
+/**
+ * showPopup
+ * 
+ * @function
+ * @name showPopup
+ * @kind function
+ * @param {any} message
+ * @param {boolean} isSuccess?
+ * @returns {void}
+ */
+function showPopup(message, isSuccess = true) {
+    const popup = document.getElementById('popupMessage');
+    const popupText = document.getElementById('popupText');
+
+    popupText.textContent = message;
+    popupText.style.color = isSuccess ? 'green' : 'red';
+    popup.classList.add('show');
+
+    // Закрытие попапа через несколько секунд
+    setTimeout(() => {
+        closePopup();
+    }, 3000);
+}
+
+function closePopup() {
+    const popup = document.getElementById('popupMessage');
+    popup.classList.remove('show');
+}
+

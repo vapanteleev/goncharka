@@ -58,7 +58,7 @@ header {
 }
 
 .parallax {
-    background-image: url('https://source.unsplash.com/1600x900/?pottery');
+    background-image: url('public/99px_ru_animacii_30539_mujskie_ruki_lepjat_iz_glini_gorshok_vnutri_kotorogo.gif');
     height: 400px;
     background-attachment: fixed;
     background-size: cover;
@@ -141,7 +141,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .carousel-button.left {
@@ -315,4 +315,176 @@ button {
 button:hover {
     background-color: #d2691e;
     transform: scale(1.05);
+}
+
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-section label {
+    font-size: 16px;
+    color: #555;
+    align-self: flex-start;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #d2691e;
+    outline: none;
+}
+
+.contact-section button {
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-section button:hover {
+    background-color: #c05818;
+    transform: scale(1.05);
+}
+
+.contact-section textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: #fff;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-popup:hover {
+    color: #d2691e;
+}
+
+#popupText {
+    font-size: 18px;
+    color: #333;
+}
+
+.popup.show {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.about-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('public/vecteezy_ai-generated-pottery-and-ceramics-craft-isolated-on_37279677.png'); /* Замените на ссылку на вашу GIF-анимацию */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Регулируйте прозрачность по необходимости */
+    z-index: -1;
+    transform: translateZ(0); /* Оптимизация для параллакса */
+}
+
+.about-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
 }

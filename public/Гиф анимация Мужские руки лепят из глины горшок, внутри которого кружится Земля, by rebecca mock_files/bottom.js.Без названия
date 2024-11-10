@@ -1,0 +1,31 @@
+/*######## Скоп ###################################################*/
+	$('[data-scope]').c4_scope({verbose:0});
+	$('[data-scope-element]').c4_scope({verbose:0});
+
+/*######## Появляющиеся картинки ###################################################*/
+
+ 	$('.c4_fadeIn').on('load',function(){ 
+		$(this).css({"opacity":1}); 
+	}) 
+	
+	$(function(){
+			setTimeout(function(){$('.c4_fadeIn').css({"opacity":1});},2000);
+	})
+	
+
+	var userLevel = parseFloat(GetCookie('_c4_users_level'));
+   if (userLevel > 0) {
+		var contentbar = document.querySelector('.it-page-contentbar');
+
+		if (contentbar) {
+			var link = document.createElement('a');
+			link.className = 'it-page-sidebar-toggle sidebar-toggle-js  ';
+			link.textContent = '|';
+			/*var icon = document.createElement('i');
+			icon.className = 'fa fa-angle-left';
+			link.appendChild(icon);*/
+			var firstChild = contentbar.firstChild;
+			contentbar.insertBefore(link, firstChild);
+		}
+	}
+
