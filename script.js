@@ -7,7 +7,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Предотвращение отправки формы
 
     // Отправка формы через EmailJS
-    emailjs.sendForm('service_juhc04a', 'template_jiuoqveы', this)
+    emailjs.sendForm('service_juhc04a', 'template_jiuoqve', this)
         .then(function (response) {
             alert('Сообщение успешно отправлено!');
             console.log('SUCCESS!', response.status, response.text);
