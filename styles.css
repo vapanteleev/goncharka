@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4e2d8;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d2691e;
+}
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cta-button {
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.parallax {
+    background-image: url('https://source.unsplash.com/1600x900/?pottery');
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-gallery {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-gallery-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.carousel-gallery img {
+    flex: 0 0 auto;
+    width: 400px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+footer {
+    background-color: #f4e2d8;
+    padding: 20px;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #f4e2d8;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Стили для скроллбаров */
+.carousel-gallery-track::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel-gallery-track::-webkit-scrollbar-thumb {
+    background-color: #d2691e;
+    border-radius: 5px;
+}
+
+.carousel-gallery-track::-webkit-scrollbar-track {
+    background-color: #f4e2d8;
+}
