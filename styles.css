@@ -74,7 +74,10 @@ header {
 }
 
 .parallax>h1 {
-    background: #00000082;
+    background: #e9ccbcb8;
+
+    color: black;
+    font-weight: 300;
     border-radius: 5px;
     padding: 10px;
 }
